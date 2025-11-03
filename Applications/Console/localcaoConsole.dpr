@@ -1,0 +1,24 @@
+program localcaoConsole;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils,
+  uMenuPrincipal in 'uMenuPrincipal.pas',
+  uCliente in '..\..\Core\Models\uCliente.pas',
+  uIUseCaseCliente in '..\..\Core\Ports\uIUseCaseCliente.pas',
+  uResponse in '..\..\Core\Response\uResponse.pas',
+  uDTOCliente in '..\..\Core\DTO\uDTOCliente.pas',
+  uUseCaseCliente in '..\..\Core\UseCases\uUseCaseCliente.pas',
+  uEnums in '..\..\Core\Enums\uEnums.pas';
+
+begin
+  try
+    menu;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.
