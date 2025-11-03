@@ -33,6 +33,9 @@ var
   response: Tresponse;
 begin
   try
+
+    cliente.ValidarRegrasNegocios;
+
     response.success := true;
     response.ErrorCode := 0;
     response.Message := RetornarMsgResponse.CADASTRADO_COM_SUCESSO;
@@ -40,7 +43,7 @@ begin
   except
     on e: exception do
     begin
-
+      response := TratarException(e);
     end;
 
   end;
@@ -59,7 +62,7 @@ begin
   except
     on e: exception do
     begin
-
+      response := TratarException(e);
     end;
 
   end;
@@ -71,6 +74,9 @@ var
   response: Tresponse;
 begin
   try
+
+    cliente.ValidarRegrasNegocios;
+
     response.success := true;
     response.ErrorCode := 0;
     response.Message := RetornarMsgResponse.ALTERADO_COM_SUCESSO;
@@ -78,7 +84,7 @@ begin
   except
     on e: exception do
     begin
-
+      response := TratarException(e);
     end;
 
   end;
@@ -97,7 +103,7 @@ begin
   except
     on e: exception do
     begin
-
+      response := TratarException(e);
     end;
 
   end;

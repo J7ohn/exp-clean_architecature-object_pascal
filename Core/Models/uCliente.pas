@@ -2,6 +2,8 @@ unit uCliente;
 
 interface
 
+uses system.SysUtils, uExceptions;
+
 type
   TCliente = class
   private
@@ -39,6 +41,9 @@ type
     property cidade: string read Fcidade write Setcidade;
     property uf: string read Fuf write Setuf;
     property telefone: string read Ftelefone write Settelefone;
+
+    procedure ValidarRegrasNegocios;
+
   end;
 
 implementation
@@ -98,6 +103,40 @@ end;
 procedure TCliente.Setuf(const Value: string);
 begin
   Fuf := Value;
+end;
+
+procedure TCliente.ValidarRegrasNegocios;
+begin
+  if trim(fnome) = '' then
+  begin
+    ExceptionNome;
+  end;
+
+  if length(fnome) <= 4 then
+  begin
+    ExceptionMinimoNome;
+  end;
+
+  if trim(fdocumento) = '' then
+  begin
+    ExceptionDocumento;
+  end;
+
+  if length(fdocumento) <= 4 then
+  begin
+    ExceptionMinimoDocumento;
+  end;
+
+  if trim(ftelefone) = '' then
+  begin
+    ExceptionTelefone;
+  end;
+
+  if length(ftelefone) < 8 then
+  begin
+    ExceptionMinimoTelefone;
+  end;
+
 end;
 
 end.

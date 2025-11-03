@@ -97,6 +97,8 @@
         <DCCReference Include="..\..\Core\DTO\uDTOCliente.pas"/>
         <DCCReference Include="..\..\Core\UseCases\uUseCaseCliente.pas"/>
         <DCCReference Include="..\..\Core\Enums\uEnums.pas"/>
+        <DCCReference Include="..\..\Core\Exceptions\uExceptions.pas"/>
+        <DCCReference Include="..\..\Utils\uUtils.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

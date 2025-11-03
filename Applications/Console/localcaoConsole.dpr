@@ -12,7 +12,9 @@ uses
   uResponse in '..\..\Core\Response\uResponse.pas',
   uDTOCliente in '..\..\Core\DTO\uDTOCliente.pas',
   uUseCaseCliente in '..\..\Core\UseCases\uUseCaseCliente.pas',
-  uEnums in '..\..\Core\Enums\uEnums.pas';
+  uEnums in '..\..\Core\Enums\uEnums.pas',
+  uExceptions in '..\..\Core\Exceptions\uExceptions.pas',
+  uUtils in '..\..\Utils\uUtils.pas';
 
 begin
   try
