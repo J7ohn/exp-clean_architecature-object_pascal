@@ -3,7 +3,7 @@ unit uUseCaseCliente;
 interface
 
 uses uIUseCaseCliente, system.SysUtils, uCliente, uDTOCliente, uResponse,
-  uEnums;
+  uEnums, uUtils;
 
 type
   TUseCaseCliente = class(TinterfacedObject, IUseCaseCliente)
