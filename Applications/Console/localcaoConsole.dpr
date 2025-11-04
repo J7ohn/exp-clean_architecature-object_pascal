@@ -14,7 +14,8 @@ uses
   uUseCaseCliente in '..\..\Core\UseCases\uUseCaseCliente.pas',
   uEnums in '..\..\Core\Enums\uEnums.pas',
   uExceptions in '..\..\Core\Exceptions\uExceptions.pas',
-  uUtils in '..\..\Utils\uUtils.pas';
+  uUtils in '..\..\Utils\uUtils.pas',
+  uVeiculo in '..\..\Core\Models\uVeiculo.pas';
 
 begin
   try

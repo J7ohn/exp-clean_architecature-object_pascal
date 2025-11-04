@@ -4,6 +4,8 @@ interface
 
 type
 
+  Status = ( sDisponivel, sAludago);
+
   TErrorCode = record
       NOME_NAO_INFORMADO,
       NOME_INVALIDO,

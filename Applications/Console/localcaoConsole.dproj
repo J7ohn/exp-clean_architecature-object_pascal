@@ -99,6 +99,7 @@
         <DCCReference Include="..\..\Core\Enums\uEnums.pas"/>
         <DCCReference Include="..\..\Core\Exceptions\uExceptions.pas"/>
         <DCCReference Include="..\..\Utils\uUtils.pas"/>
+        <DCCReference Include="..\..\Core\Models\uVeiculo.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
