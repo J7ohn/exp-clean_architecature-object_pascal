@@ -15,7 +15,9 @@ uses
   uEnums in '..\..\Core\Enums\uEnums.pas',
   uExceptions in '..\..\Core\Exceptions\uExceptions.pas',
   uUtils in '..\..\Utils\uUtils.pas',
-  uVeiculo in '..\..\Core\Models\uVeiculo.pas';
+  uVeiculo in '..\..\Core\Models\uVeiculo.pas',
+  uIUseCaseVeiculo in '..\..\Core\Ports\uIUseCaseVeiculo.pas',
+  uDTOVeiculo in '..\..\Core\DTO\uDTOVeiculo.pas';
 
 begin
   try
