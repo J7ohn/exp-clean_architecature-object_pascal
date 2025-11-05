@@ -2,7 +2,7 @@ unit uVeiculo;
 
 interface
 
-uses uEnums;
+uses uEnums, uExceptions, system.SysUtils;
 
 type
 
@@ -24,6 +24,8 @@ TVeiculo = class
   property placa: string read Fplaca write Setplaca;
   property valor: currency read Fvalor write Setvalor;
   property status: status read Fstatus write Setstatus;
+
+  procedure ValidarRegrasNegocios;
 end;
 
 implementation
@@ -53,6 +55,19 @@ end;
 procedure TVeiculo.Setvalor(const Value: currency);
 begin
   Fvalor := Value;
+end;
+
+procedure TVeiculo.ValidarRegrasNegocios;
+begin
+  if trim(fnome) = '' then
+  begin
+    ExceptionNome;
+  end;
+
+  if length(fnome) <= 4 then
+  begin
+    ExceptionMinimoNome;
+  end;
 end;
 
 end.

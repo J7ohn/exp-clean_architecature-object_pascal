@@ -12,12 +12,18 @@ type
   TExceptionTelefone = class(Exception);
   TExceptionMinimoTelefone = class(Exception);
 
+  TExceptionMinimoNomeVeiculo = class(Exception);
+  TExceptionPlacaVeiculo = class(Exception);
+
 procedure ExceptionNome;
 procedure ExceptionMinimoNome;
 procedure ExceptionDocumento;
 procedure ExceptionMinimoDocumento;
 procedure ExceptionTelefone;
 procedure ExceptionMinimoTelefone;
+
+procedure ExceptionMinimoNomeVeiculo;
+procedure ExceptionPlacaVeiculo;
 
 implementation
 
@@ -49,6 +55,17 @@ end;
 procedure ExceptionMinimoTelefone;
 begin
   raise TExceptionMinimoTelefone.Create('Telefone deve conter no mínimo 8 caracteres.');
+end;
+
+
+procedure ExceptionMinimoNomeVeiculo;
+begin
+  raise TExceptionMinimoNomeVeiculo.Create('Nome deve conter no mínimo 3 caracteres.');
+end;
+
+procedure ExceptionPlacaVeiculo;
+begin
+  raise TExceptionPlacaVeiculo.Create('Placa é obrigatório.');
 end;
 
 end.
