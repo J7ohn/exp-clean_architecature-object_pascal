@@ -17,6 +17,8 @@ type
   TExceptionMinimoPlacaVeiculo = class(Exception);
   TExceptionValorVeiculo = class(Exception);
 
+  TExceptionIdInvalido = class(Exception);
+
 procedure ExceptionNome;
 procedure ExceptionMinimoNome;
 procedure ExceptionDocumento;
@@ -28,6 +30,8 @@ procedure ExceptionMinimoNomeVeiculo;
 procedure ExceptionPlacaVeiculo;
 procedure ExceptionMinimoPlacaVeiculo;
 procedure ExceptionValorVeiculo;
+
+procedure ExceptionIdInvalido;
 
 implementation
 
@@ -81,5 +85,10 @@ end;
 procedure ExceptionValorVeiculo;
 begin
   raise TExceptionValorVeiculo.Create('Valor deve ser maior que zero (0).');
+end;
+
+procedure ExceptionIdInvalido;
+begin
+  raise TExceptionIdInvalido.Create('Id inválido.');
 end;
 end.

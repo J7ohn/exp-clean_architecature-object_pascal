@@ -12,7 +12,11 @@ type
       DOCUMENTO_NAO_INFORMADO,
       DOCUMENTO_INVALIDO,
       TELEFONE_NAO_INFORMADO,
-      TELEFONE_INVALIDO: integer;
+      TELEFONE_INVALIDO,
+      ID_INVALIDO,
+      PLACA_NAO_INFORMADA,
+      PLACA_INVALIDA,
+      VALOR_INVALIDO: integer;
   end;
 
   TmsgResponse = record
@@ -45,6 +49,9 @@ begin
   result.DOCUMENTO_INVALIDO := 103;
   result.TELEFONE_NAO_INFORMADO := 104;
   result.TELEFONE_INVALIDO := 105;
+  result.PLACA_INVALIDA := 106;
+  result.PLACA_NAO_INFORMADA := 107;
+  result.VALOR_INVALIDO := 108;
 end;
 
 end.

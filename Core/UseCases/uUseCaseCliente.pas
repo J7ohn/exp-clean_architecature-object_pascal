@@ -3,7 +3,7 @@ unit uUseCaseCliente;
 interface
 
 uses uIUseCaseCliente, system.SysUtils, uCliente, uDTOCliente, uResponse,
-  uEnums, uUtils;
+  uEnums, uUtils, uExceptions;
 
 type
   TUseCaseCliente = class(TinterfacedObject, IUseCaseCliente)
@@ -22,6 +22,8 @@ type
     // consultar
 
     function Consultar(Dto: DtoCliente): Tresponse;
+
+    procedure ValidarId(id: integer);
   end;
 
 implementation
@@ -108,6 +110,14 @@ begin
 
   end;
   result := response;
+end;
+
+procedure TUseCaseCliente.ValidarId(id: integer);
+begin
+  if id < 0 then
+  begin
+    ExceptionIdInvalido;
+  end;
 end;
 
 end.

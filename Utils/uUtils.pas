@@ -46,6 +46,26 @@ begin
     response.ErrorCode := RetornarErrorCode.TELEFONE_INVALIDO;
   end;
 
+  if e.ClassType = TExceptionPlacaVeiculo then
+  begin
+    response.ErrorCode := RetornarErrorCode.PLACA_NAO_INFORMADA;
+  end;
+
+  if e.ClassType = TExceptionMinimoPlacaVeiculo then
+  begin
+    response.ErrorCode := RetornarErrorCode.PLACA_INVALIDA;
+  end;
+
+  if e.ClassType = TExceptionMinimoNomeVeiculo then
+  begin
+    response.ErrorCode := RetornarErrorCode.NOME_INVALIDO;
+  end;
+
+  if e.ClassType = TExceptionValorVeiculo then
+  begin
+    response.ErrorCode := RetornarErrorCode.VALOR_INVALIDO;
+  end;
+
   result := response;
 
 end;
