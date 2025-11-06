@@ -14,6 +14,8 @@ type
 
   TExceptionMinimoNomeVeiculo = class(Exception);
   TExceptionPlacaVeiculo = class(Exception);
+  TExceptionMinimoPlacaVeiculo = class(Exception);
+  TExceptionValorVeiculo = class(Exception);
 
 procedure ExceptionNome;
 procedure ExceptionMinimoNome;
@@ -24,6 +26,8 @@ procedure ExceptionMinimoTelefone;
 
 procedure ExceptionMinimoNomeVeiculo;
 procedure ExceptionPlacaVeiculo;
+procedure ExceptionMinimoPlacaVeiculo;
+procedure ExceptionValorVeiculo;
 
 implementation
 
@@ -68,4 +72,13 @@ begin
   raise TExceptionPlacaVeiculo.Create('Placa é obrigatório.');
 end;
 
+procedure ExceptionMinimoPlacaVeiculo;
+begin
+  raise TExceptionMinimoPlacaVeiculo.Create('Placa deve conter no mínimo 6 caracteres.');
+end;
+
+procedure ExceptionValorVeiculo;
+begin
+  raise TExceptionValorVeiculo.Create('Valor deve ser maior que zero (0).');
+end;
 end.
