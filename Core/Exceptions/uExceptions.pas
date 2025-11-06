@@ -31,6 +31,7 @@ procedure ExceptionValorVeiculo;
 
 implementation
 
+//regras para cliente
 procedure ExceptionNome;
 begin
   raise TExceptionNome.Create('Nome é obrigatório.');
@@ -61,7 +62,7 @@ begin
   raise TExceptionMinimoTelefone.Create('Telefone deve conter no mínimo 8 caracteres.');
 end;
 
-
+//regras para veiculos
 procedure ExceptionMinimoNomeVeiculo;
 begin
   raise TExceptionMinimoNomeVeiculo.Create('Nome deve conter no mínimo 3 caracteres.');

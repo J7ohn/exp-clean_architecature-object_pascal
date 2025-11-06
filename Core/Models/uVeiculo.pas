@@ -64,10 +64,26 @@ begin
     ExceptionNome;
   end;
 
-  if length(fnome) <= 4 then
+  if length(fnome) < 3 then
   begin
     ExceptionMinimoNome;
   end;
+
+  if trim(fplaca) = '' then
+  begin
+    ExceptionPlacaVeiculo;
+  end;
+
+  if Length(fplaca) < 6 then
+  begin
+    ExceptionMinimoPlacaVeiculo;
+  end;
+
+  if fvalor <= 0 then
+  begin
+    ExceptionValorVeiculo;
+  end;
+
 end;
 
 end.
