@@ -98,6 +98,9 @@ var
   response: Tresponse;
 begin
   try
+
+    ValidarId(id);
+
     response.success := true;
     response.ErrorCode := 0;
     response.Message := RetornarMsgResponse.DELETADO_COM_SUCESSO;

@@ -66,6 +66,26 @@ begin
     response.ErrorCode := RetornarErrorCode.VALOR_INVALIDO;
   end;
 
+  if e.ClassType = TExceptionIdInvalido then
+  begin
+    response.ErrorCode := RetornarErrorCode.ID_INVALIDO;
+  end;
+
+  if e.ClassType = TExceptionLocacaoVeiculo then
+  begin
+    response.ErrorCode := RetornarErrorCode.VEICULO_NAO_INFORMADO;
+  end;
+
+  if e.ClassType = TExceptionLocacaoCliente then
+  begin
+    response.ErrorCode := RetornarErrorCode.CLIENTE_NAO_INFORMADO;
+  end;
+
+  if e.ClassType = TExceptionLocacaoVeiculoAlugado then
+  begin
+    response.ErrorCode := RetornarErrorCode.VEICULO_ALUGADO;
+  end;
+
   result := response;
 
 end;

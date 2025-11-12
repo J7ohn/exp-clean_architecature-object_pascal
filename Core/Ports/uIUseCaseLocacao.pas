@@ -13,7 +13,7 @@ type
 
     // alterar
 
-    function Editar(cliente: Tlocacao): Tresponse;
+    function Editar(locacao: Tlocacao): Tresponse;
 
     // deletar
 

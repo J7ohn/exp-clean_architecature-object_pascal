@@ -28,7 +28,11 @@ type
     ALTERADO_COM_SUCESSO,
     CONSULTA_REALIZADA_COM_SUCESSO,
     CONSULTA_SEM_RETORNO,
-    DELETADO_COM_SUCESSO: string;
+    DELETADO_COM_SUCESSO,
+    VEICULO_NAO_INFORMADO,
+    CLIENTE_NAO_INFORMADO,
+    VEICULO_ALUGADO
+    : string;
   end;
 
   function RetornarMsgResponse: TmsgResponse;
@@ -43,6 +47,9 @@ begin
    result.DELETADO_COM_SUCESSO   := 'Deletado com sucesso!';
    result.CONSULTA_REALIZADA_COM_SUCESSO := 'Consulta realizada com sucesso!';
    result.CONSULTA_SEM_RETORNO   := 'Consulta sem retorno!';
+   result.VEICULO_NAO_INFORMADO := 'Veículo não informado!';
+   result.CLIENTE_NAO_INFORMADO := 'Cliente não informado!';
+   result.VEICULO_ALUGADO := 'Veículo alugado!';
 end;
 
 function RetornarErrorCode: TerrorCode;
