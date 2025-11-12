@@ -26,10 +26,11 @@ type
     property cliente: TCliente read Fcliente write Setcliente;
     property veiculo: TVeiculo read Fveiculo write Setveiculo;
     property DataLocacao: Tdatetime read FDataLocacao write SetDataLocacao;
-    property DataDevolucao: Tdatetime read FDataDevolucao write SetDataDevolucao;
+    property DataDevolucao: Tdatetime read FDataDevolucao
+      write SetDataDevolucao;
     property total: currency read Ftotal write Settotal;
 
-
+    procedure ValidarRegrasNegocios;
   end;
 
 implementation
@@ -64,6 +65,16 @@ end;
 procedure TLocacao.Setveiculo(const Value: TVeiculo);
 begin
   Fveiculo := Value;
+end;
+
+procedure TLocacao.ValidarRegrasNegocios;
+begin
+
+  if Fveiculo = nil then
+  begin
+
+  end;
+
 end;
 
 end.

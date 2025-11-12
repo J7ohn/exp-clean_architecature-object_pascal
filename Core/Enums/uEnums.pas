@@ -16,7 +16,11 @@ type
       ID_INVALIDO,
       PLACA_NAO_INFORMADA,
       PLACA_INVALIDA,
-      VALOR_INVALIDO: integer;
+      VALOR_INVALIDO,
+      VEICULO_NAO_INFORMADO,
+      CLIENTE_NAO_INFORMADO,
+      VEICULO_ALUGADO
+      : integer
   end;
 
   TmsgResponse = record
@@ -52,6 +56,10 @@ begin
   result.PLACA_INVALIDA := 106;
   result.PLACA_NAO_INFORMADA := 107;
   result.VALOR_INVALIDO := 108;
+  result.ID_INVALIDO := 109;
+  result.VEICULO_NAO_INFORMADO := 110;
+  result.CLIENTE_NAO_INFORMADO := 111;
+  result.VEICULO_ALUGADO := 112;
 end;
 
 end.

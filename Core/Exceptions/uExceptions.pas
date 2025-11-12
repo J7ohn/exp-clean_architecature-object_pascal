@@ -5,6 +5,10 @@ interface
 uses system.SysUtils;
 
 type
+
+  TExceptionIdInvalido = class(Exception);
+
+  // regras clientes
   TExceptionNome = class(Exception);
   TExceptionMinimoNome = class(Exception);
   TExceptionDocumento = class(Exception);
@@ -12,13 +16,21 @@ type
   TExceptionTelefone = class(Exception);
   TExceptionMinimoTelefone = class(Exception);
 
+  // regras veiculos
   TExceptionMinimoNomeVeiculo = class(Exception);
   TExceptionPlacaVeiculo = class(Exception);
   TExceptionMinimoPlacaVeiculo = class(Exception);
   TExceptionValorVeiculo = class(Exception);
 
-  TExceptionIdInvalido = class(Exception);
+  // regras locacao
+  TExceptionLocacaoVeiculo = class(Exception);
+  TExceptionLocacaoCliente = class(Exception);
+  TExceptionLocacaoVeiculoAlugado = class(Exception);
 
+
+procedure ExceptionIdInvalido;
+
+// regras clientes
 procedure ExceptionNome;
 procedure ExceptionMinimoNome;
 procedure ExceptionDocumento;
@@ -26,16 +38,20 @@ procedure ExceptionMinimoDocumento;
 procedure ExceptionTelefone;
 procedure ExceptionMinimoTelefone;
 
+// regras veiculos
 procedure ExceptionMinimoNomeVeiculo;
 procedure ExceptionPlacaVeiculo;
 procedure ExceptionMinimoPlacaVeiculo;
 procedure ExceptionValorVeiculo;
 
-procedure ExceptionIdInvalido;
+// regras locacao
+procedure ExceptionLocacaoVeiculo;
+procedure ExceptionLocacaoCliente;
+procedure ExceptionLocacaoVeiculoAlugado;
 
 implementation
 
-//regras para cliente
+// regras para cliente
 procedure ExceptionNome;
 begin
   raise TExceptionNome.Create('Nome é obrigatório.');
@@ -53,7 +69,8 @@ end;
 
 procedure ExceptionMinimoDocumento;
 begin
-  raise TExceptionMinimoDocumento.Create('Documento deve conter no mínimo 4 caracteres.');
+  raise TExceptionMinimoDocumento.Create
+    ('Documento deve conter no mínimo 4 caracteres.');
 end;
 
 procedure ExceptionTelefone;
@@ -63,13 +80,15 @@ end;
 
 procedure ExceptionMinimoTelefone;
 begin
-  raise TExceptionMinimoTelefone.Create('Telefone deve conter no mínimo 8 caracteres.');
+  raise TExceptionMinimoTelefone.Create
+    ('Telefone deve conter no mínimo 8 caracteres.');
 end;
 
-//regras para veiculos
+// regras para veiculos
 procedure ExceptionMinimoNomeVeiculo;
 begin
-  raise TExceptionMinimoNomeVeiculo.Create('Nome deve conter no mínimo 3 caracteres.');
+  raise TExceptionMinimoNomeVeiculo.Create
+    ('Nome deve conter no mínimo 3 caracteres.');
 end;
 
 procedure ExceptionPlacaVeiculo;
@@ -79,7 +98,8 @@ end;
 
 procedure ExceptionMinimoPlacaVeiculo;
 begin
-  raise TExceptionMinimoPlacaVeiculo.Create('Placa deve conter no mínimo 6 caracteres.');
+  raise TExceptionMinimoPlacaVeiculo.Create
+    ('Placa deve conter no mínimo 6 caracteres.');
 end;
 
 procedure ExceptionValorVeiculo;
@@ -91,4 +111,19 @@ procedure ExceptionIdInvalido;
 begin
   raise TExceptionIdInvalido.Create('Id inválido.');
 end;
+
+// regras locacao
+procedure ExceptionLocacaoVeiculo;
+begin
+  raise TExceptionLocacaoVeiculo.Create('Veículo deve ser informado.');
+end;
+procedure ExceptionLocacaoCliente;
+begin
+  raise TExceptionLocacaoCliente.Create('Cliente deve ser informado.');
+end;
+procedure ExceptionLocacaoVeiculoAlugado;
+begin
+  raise TExceptionLocacaoVeiculoAlugado.Create('Veículo já alugado.');
+end;
+
 end.
