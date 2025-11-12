@@ -21,7 +21,8 @@ uses
   uUseCaseVeiculo in '..\..\Core\UseCases\uUseCaseVeiculo.pas',
   uLocacao in '..\..\Core\Models\uLocacao.pas',
   uIUseCaseLocacao in '..\..\Core\Ports\uIUseCaseLocacao.pas',
-  uDTOLocacao in '..\..\Core\DTO\uDTOLocacao.pas';
+  uDTOLocacao in '..\..\Core\DTO\uDTOLocacao.pas',
+  uUseCaseLocacao in '..\..\Core\UseCases\uUseCaseLocacao.pas';
 
 begin
   try
