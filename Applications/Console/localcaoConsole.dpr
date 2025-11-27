@@ -22,7 +22,8 @@ uses
   uLocacao in '..\..\Core\Models\uLocacao.pas',
   uIUseCaseLocacao in '..\..\Core\Ports\uIUseCaseLocacao.pas',
   uDTOLocacao in '..\..\Core\DTO\uDTOLocacao.pas',
-  uUseCaseLocacao in '..\..\Core\UseCases\uUseCaseLocacao.pas';
+  uUseCaseLocacao in '..\..\Core\UseCases\uUseCaseLocacao.pas',
+  uIRepositoryCliente in '..\..\Core\Ports\uIRepositoryCliente.pas';
 
 begin
   try
