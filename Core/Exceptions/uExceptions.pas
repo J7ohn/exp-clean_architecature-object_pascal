@@ -27,6 +27,8 @@ type
   TExceptionLocacaoCliente = class(Exception);
   TExceptionLocacaoVeiculoAlugado = class(Exception);
 
+  TExceptionDatabase = class(Exception);
+
 
 procedure ExceptionIdInvalido;
 
@@ -48,6 +50,8 @@ procedure ExceptionValorVeiculo;
 procedure ExceptionLocacaoVeiculo;
 procedure ExceptionLocacaoCliente;
 procedure ExceptionLocacaoVeiculoAlugado;
+
+procedure ExceptionDatabase(message: string);
 
 implementation
 
@@ -124,6 +128,12 @@ end;
 procedure ExceptionLocacaoVeiculoAlugado;
 begin
   raise TExceptionLocacaoVeiculoAlugado.Create('Veículo já alugado.');
+end;
+
+
+procedure ExceptionDatabase(message: string);
+begin
+ raise TExceptionDatabase.Create(message);
 end;
 
 end.

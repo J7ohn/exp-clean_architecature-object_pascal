@@ -1,0 +1,5 @@
+[conexao]
+server=localhost
+database=locação
+user=postgres
+password=postgres
